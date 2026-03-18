@@ -1,14 +1,27 @@
 # Harmonized Tabular-Image Fusion via Gradient-Aligned Alternating Learning
 This is the official code for the paper "Harmonized Tabular-Image Fusion via Gradient-Aligned Alternating Learning".
 
-## Introduction
-Multimodal tabular-image fusion is an emerging task that has received increasing attention in various domains. However, existing methods may be hindered by gradient conflicts between modalities, misleading the optimization of the unimodal learner. In this paper, we propose a novel Gradient-Aligned Alternating Learning (GAAL) paradigm to address this issue by aligning modality gradients. Specifically, GAAL adopts an alternating unimodal learning and shared classifier to decouple the multimodal gradient and facilitate interaction. Furthermore, we design uncertainty-based cross-modal gradient surgery to selectively align cross-modal gradients, thereby steering the shared parameters to benefit all modalities. As a result, GAAL can provide effective unimodal assistance and help boost the overall fusion performance. Empirical experiments on widely used datasets reveal the superiority of our method through comparison with various state-of-the-art (SoTA) tabular-image fusion baselines and test-time tabular missing baselines.
+**"Harmonized Tabular-Image Fusion via Gradient-Aligned Alternating Learning"**
+
+**Authors: [Longfei Huang](https://hlf404.github.io/), and [Yang Yang](http://home.njustkmg.cn:4056/Introduction-cn.html)**
+
+**Accepted by: ICME 2026**
+
+**[[arXiv]()]** 
 
 <p align="center">
 <img src="image/arch.png" alt="wild_settings" width="100%" align=center />
 </p>
 
-## Installation
+## ✨ Motivation
+
+Tabular-image fusion methods may be hindered by gradient conflicts between modalities, misleading the optimization of the unimodal learner. 
+
+## 📖 Overview
+
+We propose GAAL to address this issue by aligning modality gradients. GAAL adopts an alternating unimodal learning and shared classifier to decouple the multimodal gradient and facilitate interaction. Furthermore, we design uncertainty-based cross-modal gradient surgery to selectively align cross-modal gradients, thereby steering the shared parameters to benefit all modalities.
+
+## 🚀 Quick Start
 
 **Requirements**
 
@@ -41,6 +54,19 @@ Your data should be constructed in `/configs/dataset`.
 
 ```bash
 $ CUDA_VISIBLE_DEVICES=0 python run.py pretrain=False test=False evaluate=True test_and_eval=True datatype=imaging_and_tabular dataset={YOUR_DATASET}
+```
+
+## 📘 Citation
+
+If you find this work useful, consider giving this repository a star ⭐️ and citing 📑 our paper as follows:
+
+```bibtex
+@inproceedings{Huang2026gaal,
+  title={Harmonized Tabular-Image Fusion via Gradient-Aligned Alternating Learning},
+  author={Longfei Huang and Yang Yang},
+  booktitle={ICME},
+  year={2026},
+}
 ```
 
 ## Acknowledgment
