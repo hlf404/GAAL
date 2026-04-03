@@ -7,7 +7,7 @@ This is the official code for the paper "Harmonized Tabular-Image Fusion via Gra
 
 **Accepted by: ICME 2026**
 
-**[[arXiv]()]** 
+**[[arXiv](https://arxiv.org/abs/2604.01579)]** 
 
 <p align="center">
 <img src="image/arch.png" alt="wild_settings" width="100%" align=center />
